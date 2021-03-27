@@ -79,6 +79,8 @@ p{
   overflow: hidden;
 }
 .link{
+  display: inline-block;
+  align-items: center;
   text-decoration: none;
   color:inherit;
 }
@@ -112,6 +114,24 @@ padding-left: 0px;
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
+.social-icons .icon{
+  width: 20px;
+  height: 20px;
+}
+
+.social-icon-link{
+  display: block;
+  width: 44px;
+  height: 44px;
+  background-color: yellow;
+}
+
+
+.social-icons{
+  display: inline-flex;
+}
+
 /* Header*/
 
 .header{
@@ -164,16 +184,19 @@ padding-left: 0px;
 .menu{
   display: flex;
   
+  
 }
 .menu .menu-item + .menu-item{
   margin-left: 50px;
   }
 
 .menu .link{
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px; 
 }
+
+
 
 /* Hero section */
 
@@ -187,6 +210,21 @@ padding-left: 0px;
   max-width: 700px; 
   margin: 0 auto;
 }
+.overlay{
+  max-width: 1600px;
+  min-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid black;
+  background-image: linear-gradient(
+    to right, 
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)), 
+    url(../images/icon/Img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-style: cover;
+}
 
 /* Skill section */
 
@@ -198,10 +236,39 @@ padding-left: 0px;
   width: 270px;
   margin-right:  30px;
 }
+.skill-item::before{
+  display: block;
+  content: " ";
+  height: 120px;
+  background-color: rgb(245, 244, 250);
+  background-repeat: no-repeat;
+  background-size: 70px;
+  background-position: center;
+}
+.icon-group::before{
+  background-image: 
+  url(../images/icon/Group.svg);
+ 
+}
+.icon-clock::before{
+  background-image: 
+  url(../images/icon/clock\ 1.svg);
+} 
+
+.icon-diagram::before{
+  background-image: 
+  url(../images/icon/diagram\ 1.svg);
+}
+
+.icon-austronaut::before{
+  background-image: 
+  url(../images/icon/astronaut\ 1.svg);
+}
 
 .skill-item:last-child{
  margin-right: 0;   
 }
+
 .section-pad{
   padding-top: 0;
 }
@@ -231,7 +298,7 @@ padding-left: 0px;
 /* Team section */
 
 .team-list{
-  display: flex;
+  display: inline-flex;
 }
 
 .team-item{
@@ -247,6 +314,12 @@ margin-right: 30px;
   padding: 0;
 
 }
+
+/* Section-client */
+
+
+
+
 
 
 /* Button section */
@@ -381,7 +454,6 @@ letter-spacing: 0.06em;
   background-color: var(--grey-bg-color);
   padding-bottom: 94px;
  }
-
 
 .grid-item .border-item {
   width: 370px;
