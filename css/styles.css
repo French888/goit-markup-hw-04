@@ -47,6 +47,10 @@ body {
   
   }
 
+  a{
+    outline:none;
+  }
+
 img{
   display: block;
   max-width: 100%;
@@ -93,16 +97,18 @@ color:var(--accent-color);
 }
 
 
-/*.button-portfolio:hover,*/
+.button-portfolio:hover,
 .button-portfolio:focus{
 background-color: var(--accent-color-hover);
 color:var(--page-title-color);
+outline:none;
 }
 
 .button-webstudio:hover,
 .button-webstudio:focus{
 background-color: var(--accent-color-hover);
 color:var(--page-title-color);
+outline:none;
   }
 
 .list{
